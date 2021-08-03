@@ -1,0 +1,251 @@
+@charset "utf-8"; 
+
+/* *******************************************************
+    filename : style.css
+    description : all layout CSS
+******************************************************** */
+
+/* ==================== import ====================== */
+@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css');
+@import 'mixin';
+
+/* ==================== html, body stylings ====================== */
+html{overflow: hidden;}
+body {
+    @include fullBox; 
+    font-size: 15px;
+    word-spacing:-0.025em;
+    overflow: overlay;
+    font-family: NanumSquareR,'Roboto', sans-serif;
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased!important;
+    text-rendering: optimizeLegibility!important;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* variables =================================== */
+.inner{@include fullBox; display: block; position: relative; max-width: 1290px;  margin: 0 auto;}
+.container{
+    @include boxsizing;
+    @include fullBox;  
+    padding: 6%;
+}
+.project-container{background-color:$masterColor;}
+
+/* content stylings =================================== */
+// common styling
+.wrap{width: 100vw;height: 100vh;}
+.section-area{
+  @include flexCenter;
+  @include fullBox;
+  box-shadow: 1px 1px 27px #f1f1f1;
+  @include breakPoint($tabletPoint){
+    display: block;
+  }
+  .tit{
+      width: 40%; 
+      font-size: 2em; 
+      font-weight: bold;
+        @include breakPoint(1280px){
+            width: 30%;
+        }
+        @include breakPoint($tabletPoint){
+            @include boxsizing();
+            width: 100%;
+            padding: 30px 15px;
+        }
+        @include breakPoint(420px){
+            padding: 15px;
+        }
+    }
+}
+
+// slider styling
+.swiper-container {@include fullBox;}
+.swiper-slide {
+  @include sliderCenter();
+  text-align: center;
+  font-size: 18px;
+  background: $masterWiteColor;
+}
+
+// main styling
+.main-area{
+  @include fullBox;
+  background-color: $masterColor;
+  h1 {
+    @include position(absolute,20px,25px,auto,auto);
+    font-weight: bold;
+    font-size: 15vmin;
+    text-align: right;
+    color: rgba(207,216,220,0.02);
+    letter-spacing: 4px;
+    p{line-height: 1;}
+  }
+  .main-tit-box{
+    @include position(absolute,auto,auto,10%,10%);
+    text-align: left;
+    .typed{font-size: 10vmin; color: $masterWiteColor;}
+  }
+  .typed-cursor{opacity: 0;}
+}
+
+// career styling 
+.career-list-box{
+    @include boxsizing();
+    width: 55%;
+    padding: 55px;
+    box-shadow: 2px 3px 10px #f5f5f5;
+    @include breakPoint(1280px){
+        width: 65%;
+        padding: 40px
+    }
+    @include breakPoint($tabletPoint){
+        width: 85vw;
+        margin: auto;
+        padding: 30px;
+    }
+    @include breakPoint(420px){
+        padding: 15px;
+    }
+}
+.career-list{
+  .career-list-item{
+    @include flexCenter;
+    margin-bottom: 20px;
+    text-align: left;
+    @include breakPoint($tabletPoint){
+        display: block;
+        text-align: center;
+    }
+  }
+  .career-tit{
+      width: 180px;font-size: 1em; color: $masterFontColor;
+        @include breakPoint($tabletPoint){
+            width: 100%;
+        }
+    }
+  strong{display: block;padding-bottom: 8px;}
+  .line{
+    display: inline-block; 
+    width: 60px;
+    height: 1px; 
+    margin-right: 30px; 
+    background-color: #ccc;;
+    @include breakPoint($tabletPoint){
+        margin: 10px 0;
+    }
+  }
+  .point-tit{font-size: 1.5em; font-weight: bold; color: $masterColor}
+}
+.tag{
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 3px 10px; 
+    background-color: #eee;
+    border-radius: 10px; 
+    font-size: 0.7em;
+    word-break: break-word;
+    &.html{background-color:rgba(243, 88, 37, 0.2);}
+    &.css{background-color:rgba(0, 123, 201, 0.2);}
+    &.scss{background-color:rgba(175, 0, 219, 0.2);}
+    &.jquery{background-color:rgba(0, 84, 237 ,0.2);}
+    &.bootstrap{background-color: rgba(86, 61, 124, 0.2);}
+    &.js{background-color: rgba(247, 224, 24, 0.2);}
+    &.react{background-color: rgba(11, 216, 255, 0.2);}
+}
+
+// project styling
+.project-area{
+  @include boxsizing();
+  padding: 30px;
+  box-shadow:1px 1px 10px #252d4c;
+  .tit{color: $masterWiteColor}
+  .project-box{
+    width: 60%;
+    height: 80%;
+    @include breakPoint(1280px){
+        width: 70%;
+    }
+    @include breakPoint($tabletPoint){
+        width: 100%;
+        height: 85%;
+    }
+  }
+}
+.project-list-box{
+  display: flex;
+  border-radius: 10px;
+  .project-list{
+        display: flex;
+        position: relative; 
+        padding: 0 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        @include breakPoint($tabletPoint){
+            display: block;
+            padding: 0;
+        }
+        .project-cont{
+            @include boxsizing();
+            width: 50%;
+            padding: 10px;
+            text-align: left;
+            @include breakPoint($tabletPoint){
+                width: 100%;
+                text-align: center;
+            }
+            .pj-cont-tit{padding-bottom: 15px;}
+            .pj-tit{
+                display: block; padding: 20px 0; font-size: 0.89em;
+                @include breakPoint($tabletPoint){
+                    padding: 12px 0;
+                }
+            }
+            .txt{display: block; font-size: 0.8em;}
+            .tag{font-size: 0.89em;}
+        }
+        .project-img-box{
+            width: 40%;
+            height: 40vh;
+            margin: 0 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            @include breakPoint($tabletPoint){
+                width: 100%;
+                height: 30vh;
+                margin: 0;
+                border: 0;
+                border-bottom: 1px solid #ccc;;
+                border-radius: 0;
+            }
+        }
+        .project-img{
+            @include backgroundPosition(); 
+            width: 100%; 
+            height: 40vh; 
+            border-bottom-left-radius: 10px; 
+            border-bottom-right-radius: 10px; 
+            transition: background-position 2000ms ease-in-out;
+            @include breakPoint($tabletPoint){
+                height: 30vh;
+                border-radius: 0; 
+            }
+            &.img01{@include backgroundImg(theme01);}
+            &.img02{@include backgroundImg(theme02);}
+            &.img03{@include backgroundImg(theme03);}
+            &.img04{@include backgroundImg(theme04);}
+            &.img05{@include backgroundImg(project01);}
+            &.img06{@include backgroundImg(project02);}
+            &.img07{@include backgroundImg(project03);}
+            &.img08{@include backgroundImg(project04);}
+            &:hover,&:active{
+                &{background-position: bottom center;}
+            }
+        }
+  }
+}
+
+
+

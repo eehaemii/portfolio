@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+/* *******************************************************
+    filename : common.css
+    description : common CSS
+******************************************************** */
+
+/* flex center */
+.dsp-felx-center{display: flex; justify-content: center; -webkit-justify-content: center; align-items: center;-webkit-align-items: center;}
+
+/* font-bold */
+.font-bold{font-weight: bold;}
