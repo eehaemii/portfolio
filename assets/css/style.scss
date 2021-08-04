@@ -28,7 +28,7 @@ body {
 .container{
     @include boxsizing;
     @include fullBox;  
-    padding: 6%;
+    padding: 3%;
 }
 .project-container{background-color:$masterColor;}
 
@@ -52,7 +52,8 @@ body {
         @include breakPoint($tabletPoint){
             @include boxsizing();
             width: 100%;
-            padding: 30px 15px;
+            padding: 15px;
+            font-size: 1.6em;
         }
         @include breakPoint(420px){
             padding: 15px;
@@ -103,29 +104,40 @@ body {
     @include breakPoint($tabletPoint){
         width: 85vw;
         margin: auto;
-        padding: 30px;
+        padding: 0;
     }
     @include breakPoint(420px){
         padding: 15px;
     }
 }
 .career-list{
+    @include breakPoint($tabletPoint){
+        display: flex;
+        flex-wrap: wrap;
+    }
   .career-list-item{
     @include flexCenter;
     margin-bottom: 20px;
     text-align: left;
     @include breakPoint($tabletPoint){
         display: block;
+        width: 50%;
         text-align: center;
+    }
+    &:first-child{
+        @include breakPoint($tabletPoint){
+            width: 100%;
+        }
     }
   }
   .career-tit{
       width: 180px;font-size: 1em; color: $masterFontColor;
         @include breakPoint($tabletPoint){
             width: 100%;
+            font-size: 0.9em;
         }
     }
-  strong{display: block;padding-bottom: 8px;}
+  strong{display: block;padding-bottom: 8px; font-size: 0.9em;}
   .line{
     display: inline-block; 
     width: 60px;
@@ -136,7 +148,14 @@ body {
         margin: 10px 0;
     }
   }
-  .point-tit{font-size: 1.5em; font-weight: bold; color: $masterColor}
+  .point-tit{
+    font-size: 1.5em; 
+    font-weight: bold; 
+    color: $masterColor;
+    @include breakPoint($tabletPoint){
+        font-size: 1.1em;
+    }
+  }
 }
 .tag{
     display: inline-block;
@@ -169,7 +188,7 @@ body {
     }
     @include breakPoint($tabletPoint){
         width: 100%;
-        height: 85%;
+        height: 90%;
     }
   }
 }
