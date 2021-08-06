@@ -108,33 +108,33 @@ html{scroll-behavior: smooth;}
     .main-tit-box{
         @include position(absolute,auto,auto,10%,10%);
         text-align: left;
-        .typed{font-size: 10vmin; color: $masterWiteColor;}
+        :root {--base-delay: 0.5;--reveal-speed: 0.5;--stagger: 0.1;}
+        .main-tit-reveal {
+          align-items: flex-start;
+          display: inline-flex;
+          flex-direction: column;
+          .tit{
+              position: relative;
+              -webkit-animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
+              animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
+              font-size: 8vmin; 
+              font-weight: bold;
+              overflow: hidden;
+              letter-spacing: 6px;
+              &:after{
+                  @include position(absolute,0,0,0,0);
+                  content: '';
+                  background: var(--color, #1e90ff);
+                  -webkit-animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
+                          animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
+              }
+          }
+        }
     }
     .typed-cursor{opacity: 0;}
   }
 
-  :root {--base-delay: 0.5;--reveal-speed: 0.5;--stagger: 0.1;}
-  .main-tit-reveal {
-    align-items: flex-start;
-    display: inline-flex;
-    flex-direction: column;
-    .tit{
-        position: relative;
-        -webkit-animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
-        animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
-        font-size: 8vmin; 
-        font-weight: bold;
-        overflow: hidden;
-        letter-spacing: 6px;
-        &:after{
-            @include position(absolute,0,0,0,0);
-            content: '';
-            background: var(--color, #1e90ff);
-            -webkit-animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
-                    animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
-        }
-    }
-  }
+
 
 @-webkit-keyframes block-reveal {
     0% {

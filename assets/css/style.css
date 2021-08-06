@@ -162,26 +162,17 @@ html {
   left: 10%;
   text-align: left;
 }
-.main-area .main-tit-box .typed {
-  font-size: 10vmin;
-  color: #fff;
-}
-.main-area .typed-cursor {
-  opacity: 0;
-}
-
-:root {
+.main-area .main-tit-box :root {
   --base-delay: 0.5;
   --reveal-speed: 0.5;
   --stagger: 0.1;
 }
-
-.main-tit-reveal {
+.main-area .main-tit-box .main-tit-reveal {
   align-items: flex-start;
   display: inline-flex;
   flex-direction: column;
 }
-.main-tit-reveal .tit {
+.main-area .main-tit-box .main-tit-reveal .tit {
   position: relative;
   -webkit-animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
   animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
@@ -190,7 +181,7 @@ html {
   overflow: hidden;
   letter-spacing: 6px;
 }
-.main-tit-reveal .tit:after {
+.main-area .main-tit-box .main-tit-reveal .tit:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -200,6 +191,9 @@ html {
   background: var(--color, #1e90ff);
   -webkit-animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
   animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
+}
+.main-area .typed-cursor {
+  opacity: 0;
 }
 
 @-webkit-keyframes block-reveal {
