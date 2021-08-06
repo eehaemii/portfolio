@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* *******************************************************
     filename : style.css
     description : all layout CSS
@@ -83,7 +84,7 @@ html {
   box-sizing: border-box;
   width: 100%;
   padding: 1em;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: bold;
 }
 @media all and (min-width: 0px) and (max-width: 1000px) {
@@ -154,6 +155,11 @@ html {
 .main-area h1 p {
   line-height: 1;
 }
+@media all and (min-width: 0px) and (max-width: 720px) {
+  .main-area h1 {
+    font-size: 12vmin;
+  }
+}
 .main-area .main-tit-box {
   position: absolute;
   top: auto;
@@ -191,9 +197,6 @@ html {
   background: var(--color, #1e90ff);
   -webkit-animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
   animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
-}
-.main-area .typed-cursor {
-  opacity: 0;
 }
 
 @-webkit-keyframes block-reveal {
@@ -361,9 +364,12 @@ html {
 }
 @media all and (min-width: 0px) and (max-width: 920px) {
   .project-list-box .project-list {
-    display: block;
     width: calc(100%/2 - 15px);
-    padding: 0;
+  }
+}
+@media all and (min-width: 0px) and (max-width: 720px) {
+  .project-list-box .project-list {
+    width: 100%;
   }
 }
 .project-list-box .project-list .project-cont {
@@ -404,6 +410,7 @@ html {
   height: 20vh;
   margin: 0 15px;
   border: 1px solid #ccc;
+  box-shadow: 0px ​4px 5px #ccc;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -473,4 +480,38 @@ html {
 }
 .project-list-box .project-list .project-img:hover, .project-list-box .project-list .project-img:active {
   background-position: bottom center;
+}
+
+.last-content {
+  box-sizing: border-box;
+  padding: 2em 2em 1em;
+  text-align: center;
+}
+.last-content .text {
+  font-size: 1.5em;
+  color: #fff;
+}
+.last-content span {
+  display: inline-block;
+  margin-left: 10px;
+  -webkit-animation: shake 0.6s infinite alternate;
+  animation: shake 0.6s infinite alternate;
+  transform-origin: 50% 100%;
+}
+
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: rotateZ(3deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-3deg);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: rotateZ(3deg);
+  }
+  100% {
+    transform: rotateZ(-3deg);
+  }
 }/*# sourceMappingURL=style.css.map */

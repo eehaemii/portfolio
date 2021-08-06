@@ -59,7 +59,7 @@ html{scroll-behavior: smooth;}
         @include boxsizing();
         width: 100%; 
         padding: 1em;
-        font-size: 4em; 
+        font-size: 3em; 
         font-weight: bold;
         @include breakPoint($tabletPoint){
             @include boxsizing();
@@ -104,6 +104,9 @@ html{scroll-behavior: smooth;}
         color: rgba(207,216,220,0.02);
         letter-spacing: 4px;
         p{line-height: 1;}
+        @include breakPoint(720px){
+            font-size: 12vmin;
+        }
     }
     .main-tit-box{
         @include position(absolute,auto,auto,10%,10%);
@@ -131,10 +134,7 @@ html{scroll-behavior: smooth;}
           }
         }
     }
-    .typed-cursor{opacity: 0;}
-  }
-
-
+}
 
 @-webkit-keyframes block-reveal {
     0% {
@@ -173,7 +173,6 @@ html{scroll-behavior: smooth;}
     50%, 100% {color: rgba(250,250,250,0.3);}
 }
     
-
 // career styling 
 .career-list-box{
     @include boxsizing();
@@ -266,9 +265,10 @@ html{scroll-behavior: smooth;}
             padding: 0;
         }
         @include breakPoint(920px){
-            display: block;
             width: calc(100%/2 - 15px);
-            padding: 0;
+        }
+        @include breakPoint(720px){
+            width: 100%;
         }
         .project-cont{
             @include boxsizing();
@@ -295,6 +295,7 @@ html{scroll-behavior: smooth;}
             height: 20vh;
             margin: 0 15px;
             border: 1px solid #ccc;
+            box-shadow: 0px ​4px 5px #ccc;
             border-radius: 10px;
             overflow: hidden;
             @include breakPoint(1220px){
@@ -330,6 +331,32 @@ html{scroll-behavior: smooth;}
             }
         }
     }
+}
+
+.last-content{
+    @include boxsizing();
+    padding: 2em 2em 1em;
+    text-align: center;
+    .text{
+        font-size: 1.5em;
+        color: #fff;
+    }
+    span{
+        display: inline-block;
+        margin-left: 10px;
+        -webkit-animation: shake 0.6s infinite alternate;
+        animation: shake 0.6s infinite alternate;
+        -webkit-transform-origin: 50% 100%;
+        transform-origin: 50% 100%;
+    }
+}
+@-webkit-keyframes shake {
+    0% {-webkit-transform: rotateZ(3deg);}
+    100% {-webkit-transform: rotateZ(-3deg);}
+}
+@keyframes shake {
+    0% {-webkit-transform: rotateZ(3deg);transform: rotateZ(3deg);}
+    100% {-webkit-transform: rotateZ(-3deg);transform: rotateZ(-3deg);}
 }
 
 
