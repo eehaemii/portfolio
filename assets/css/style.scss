@@ -181,11 +181,11 @@ html{scroll-behavior: smooth;}
 }
 @-webkit-keyframes show-text {
     0% {color: transparent;}
-    50%, 100% {color: $masterWiteColor;}
+    50%, 100% {color: $masterWiteColor;text-shadow: 2px 2px rgba(250,250,250,0.2);}
 }
 @keyframes show-text {
     0% {color: transparent;}
-    50%, 100% {color: $masterWiteColor;}
+    50%, 100% {color: $masterWiteColor;text-shadow: 2px 2px rgba(250,250,250,0.2);}
 }
     
 // career styling 
@@ -272,7 +272,6 @@ html{scroll-behavior: smooth;}
     @include breakPoint(425px){
        padding:40px 15px;
     }
-    
     .project-list{
         @include flexCenter();
         position: relative; 
@@ -318,7 +317,6 @@ html{scroll-behavior: smooth;}
             height: 20vh;
             margin: 0 15px;
             border: 1px solid #ccc;
-            box-shadow: 0px ​4px 5px #ccc;
             border-radius: 10px;
             overflow: hidden;
             @include breakPoint(1220px){
