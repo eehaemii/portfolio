@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAyCA,cAAc;AAMd,gBAAgB",
-    "sources": [
-        "mixin.scss"
-    ],
-    "names": [],
-    "file": "mixin.css"
-}
+{"version":3,"sources":["mixin.scss"],"names":[],"mappings":"AAyCA,aAAA;AAMA,eAAA","file":"mixin.css"}

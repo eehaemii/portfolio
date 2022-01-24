@@ -364,14 +364,16 @@ html{scroll-behavior: smooth;}
                 margin: 0;
                 padding: 0;
             }
-            &.img01{@include backgroundImg(project04);}
-            &.img02{@include backgroundImg(project03);}
-            &.img03{@include backgroundImg(project02);}
-            &.img04{@include backgroundImg(project01);}
-            &.img05{@include backgroundImg(theme04);}
-            &.img06{@include backgroundImg(theme03);}
-            &.img07{@include backgroundImg(theme02);}
-            &.img08{@include backgroundImg(theme01);}
+            &.img01{@include backgroundImg(theme01);}
+            &.img02{@include backgroundImg(theme02);}
+            &.img03{@include backgroundImg(theme03);}
+            &.img04{@include backgroundImg(theme04);}
+            &.img05{@include backgroundImg(project01);}
+            &.img06{@include backgroundImg(project02);}
+            &.img07{@include backgroundImg(project03);}
+            &.img08{@include backgroundImg(project04);}
+            &.img09{@include backgroundImg(project06);}
+            &.img10{@include backgroundImg(project07);}
             &:hover,&:active{
                 &{background-position: bottom center;}
             }
