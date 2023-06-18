@@ -131,22 +131,15 @@ html {
 .tag.react {
   background-color: rgba(11, 216, 255, 0.2);
 }
+.tag.vue {
+  background-color: rgba(63, 184, 131, 0.2);
+}
 
 .icon {
   display: inline-block;
   margin-left: 10px;
-  -webkit-animation: shake 0.6s infinite alternate;
   animation: shake 0.6s infinite alternate;
   transform-origin: 50% 100%;
-}
-
-@-webkit-keyframes shake {
-  0% {
-    transform: rotateZ(3deg);
-  }
-  100% {
-    transform: rotateZ(-3deg);
-  }
 }
 @keyframes shake {
   0% {
@@ -204,7 +197,6 @@ html {
 }
 .main-area .main-tit-box .main-tit-reveal .tit {
   position: relative;
-  -webkit-animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
   animation: show-text calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
   font-family: "Signika", sans-serif;
   font-size: 8vmin;
@@ -220,28 +212,13 @@ html {
   left: 0;
   content: "";
   background: var(--color, #1e90ff);
-  -webkit-animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
   animation: block-reveal calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) both;
 }
 .main-area .main-tit-box .main-tit-reveal .github-icon {
-  -webkit-animation: show-icon calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
   animation: show-icon calc(var(--reveal-speed, 0.5) * 1s) calc(var(--delay) * 1s) steps(1) both;
 }
 .main-area .main-tit-box .main-tit-reveal .github-icon img {
-  -webkit-animation: shake-img 1s infinite alternate;
   animation: shake-img 1s infinite alternate;
-}
-
-@-webkit-keyframes block-reveal {
-  0% {
-    transform: translate(-110%, 0);
-  }
-  45%, 55% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(110%, 0);
-  }
 }
 @keyframes block-reveal {
   0% {
@@ -254,15 +231,6 @@ html {
     transform: translate(110%, 0);
   }
 }
-@-webkit-keyframes show-text {
-  0% {
-    color: transparent;
-  }
-  50%, 100% {
-    color: #fff;
-    text-shadow: 2px 2px rgba(250, 250, 250, 0.2);
-  }
-}
 @keyframes show-text {
   0% {
     color: transparent;
@@ -272,15 +240,6 @@ html {
     text-shadow: 2px 2px rgba(250, 250, 250, 0.2);
   }
 }
-@-webkit-keyframes show-icon {
-  0% {
-    opacity: 0;
-  }
-  50%, 100% {
-    opacity: 1;
-    box-shadow: 2px 2px rgba(250, 250, 250, 0.2);
-  }
-}
 @keyframes show-icon {
   0% {
     opacity: 0;
@@ -288,14 +247,6 @@ html {
   50%, 100% {
     opacity: 1;
     box-shadow: 2px 2px rgba(250, 250, 250, 0.2);
-  }
-}
-@-webkit-keyframes shake-img {
-  0% {
-    transform: translateY(5px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
 @keyframes shake-img {
@@ -327,7 +278,7 @@ html {
   align-items: center;
   -webkit-align-items: center;
   position: relative;
-  width: calc(100%/2 - 15px);
+  width: calc(50% - 15px);
   margin: 0 15px 20px 0;
   padding: 2em;
   background-color: #fff;
@@ -428,7 +379,7 @@ html {
   align-items: center;
   -webkit-align-items: center;
   position: relative;
-  width: calc(100%/3 - 45px);
+  width: calc(33.3333333333% - 45px);
   margin: 0 15px 15px 0;
   padding: 15px;
   border-radius: 10px;
@@ -438,13 +389,13 @@ html {
 @media all and (min-width: 0px) and (max-width: 1220px) {
   .project-list-box .project-list {
     display: block;
-    width: calc(100%/3 - 15px);
+    width: calc(33.3333333333% - 15px);
     padding: 0;
   }
 }
 @media all and (min-width: 0px) and (max-width: 920px) {
   .project-list-box .project-list {
-    width: calc(100%/2 - 15px);
+    width: calc(50% - 15px);
   }
 }
 @media all and (min-width: 0px) and (max-width: 720px) {
