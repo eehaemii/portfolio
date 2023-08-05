@@ -83,7 +83,6 @@ html {
 .section-area .tit {
   box-sizing: border-box;
   width: 100%;
-  padding: 1em;
   font-family: "Signika", sans-serif;
   font-size: 3em;
 }
@@ -349,7 +348,15 @@ html {
 .project-area {
   box-sizing: border-box;
 }
-.project-area .tit {
+.project-area .page-header {
+  padding: 1em;
+}
+.project-area .page-header .tit {
+  color: #fff;
+}
+.project-area .page-header .desc {
+  padding-top: 0.5em;
+  font-size: 13px;
   color: #fff;
 }
 .project-area .project-box {

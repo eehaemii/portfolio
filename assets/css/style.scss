@@ -55,7 +55,6 @@ html{scroll-behavior: smooth;}
     .tit{
         @include boxsizing();
         width: 100%; 
-        padding: 1em;
         font-family: 'Signika', sans-serif;
         font-size: 3em; 
         @include breakPoint($tabletPoint){
@@ -282,7 +281,21 @@ html{scroll-behavior: smooth;}
 // project styling
 .project-area{
   @include boxsizing();
-  .tit{color: $masterWiteColor}
+
+  .page {
+    &-header {
+        padding: 1em;
+
+        .tit{color: $masterWiteColor}
+
+        .desc {
+            padding-top: 0.5em;
+            font-size: 13px;
+            color: $masterWiteColor;
+        }
+    }
+  }
+
   .project-box{width: 100%;}
 }
 .project-list-box{
