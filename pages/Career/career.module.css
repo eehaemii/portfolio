@@ -1,0 +1,56 @@
+.careerArea {
+  width: 100%;
+  height: 100%;
+  padding: 5vw 8vw;
+}
+
+.careerTitle {
+  width: 100%;
+  padding-bottom: 16px;
+  font-size: 2.5em;
+}
+
+.careerListBox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.careerList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.careerItem {
+  flex: 1 1 calc(50% - 8px);
+  flex-grow: 0;
+  box-sizing: border-box;
+}
+
+.moreButton {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 28px auto 0;
+  padding: 6px 40px;
+  border-radius: 25px;
+  border: 2px solid var(--blue);
+  background: transparent;
+  color: var(--blue);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.isActiveMoreButton {
+  background: var(--blue);
+  color: var(--base-white);
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.iconActive {
+  transform: rotate(180deg);
+}

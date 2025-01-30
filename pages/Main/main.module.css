@@ -1,0 +1,17 @@
+.mainContainer {
+  display: flex;
+  align-items: flex-end;
+  width: 100vw;
+  height: 100vh;
+  padding: 5rem;
+  background-color: var(--primary);
+}
+
+.mainTitle {
+  display: block;
+  width: 100%;
+  font-family: var(--font-signika);
+  font-size: 8vmin;
+  font-weight: bold;
+  letter-spacing: 6px;
+}
