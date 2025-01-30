@@ -4,7 +4,6 @@ export interface IPropsBox {
   list?: ItemType[];
   name?: string;
   thumbnail?: string;
-  description?: string;
   demoLink?: string;
   onClick?: () => void;
 }

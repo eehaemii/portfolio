@@ -4,7 +4,7 @@ import styles from './career.module.css';
 import { EThemeTag } from '@/components/Tag/interface';
 import { useState } from 'react';
 
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaChevronDown } from 'react-icons/fa';
 
 const Career = () => {
   const [showAll, setShowAll] = useState(false);

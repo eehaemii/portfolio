@@ -45,6 +45,7 @@ const ProjectPage = () => {
       <div className={styles.projectInner}>
         {projects.map((project, index) => (
           <ProjectCard
+            key={index}
             thumbnail={project.thumbnail}
             name={project.name}
             list={project.list}

@@ -1,8 +1,11 @@
-// next.config.js
-module.exports = {
-  compiler: {
-    styledComponents: true,
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  images: {
+    unoptimized: true,
   },
-  swcMinify: false, // 만약 SWC 사용 시 문제가 있으면 비활성화
-  reactStrictMode: false,
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
 };
+
+module.exports = nextConfig;

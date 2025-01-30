@@ -4,4 +4,4 @@
 
 ## LINK
 
-- https://github.com/eehaemii/portfolio ㅎ
+- https://github.com/eehaemii/portfolio

@@ -4,13 +4,7 @@ import * as S from './styled';
 import { IPropsBox, ItemType } from '@/components/Card/interface';
 import Tag from '@/components/Tag';
 
-const ProjectCard: React.FC<IPropsBox> = ({
-  name,
-  thumbnail,
-  description,
-  demoLink,
-  list = [],
-}) => {
+const ProjectCard: React.FC<IPropsBox> = ({ name, thumbnail, demoLink, list = [] }) => {
   const [imageClass, setImageClass] = useState('');
 
   return (
