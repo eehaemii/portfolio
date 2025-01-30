@@ -1,8 +1,5 @@
 import Head from 'next/head';
 
-// import { EThemeTag } from '@/components/Tag/interface';
-// import Tag from '@/components/Tag';
-
 import Main from './Main';
 import Career from './Career';
 import Project from './Project';

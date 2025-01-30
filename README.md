@@ -4,4 +4,4 @@
 
 ## LINK
 
-- https://github.com/eehaemii/portfolio
+- https://haemi-lee.netlify.app/
