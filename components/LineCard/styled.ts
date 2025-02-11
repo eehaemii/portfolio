@@ -7,7 +7,6 @@ export const LineCard = styled.div<IPropsBox>`
   padding: 2em;
   background-color: var(--base-white);
   border-radius: 10px;
-  box-shadow: 1px solid;
   box-shadow: 0 1px 3px #dcdcdc;
   text-align: center;
 
@@ -23,6 +22,10 @@ export const LineCard = styled.div<IPropsBox>`
     background-color: #498ce8;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+  }
+
+  @media (max-width: 1000px) {
+    padding: 2em 1em;
   }
 `;
 

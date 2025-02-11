@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import Image from 'next/image';
 
 export const Card = styled.li`
   flex: 1;
@@ -11,13 +12,26 @@ export const Card = styled.li`
   &:hover {
     transform: translateY(-10px);
   }
+
+  @media (max-width: 1000px) {
+    margin-top: 16px;
+  }
 `;
 
 export const Thumbnail = styled.div`
   position: relative;
   width: 100%;
-  height: 260px;
+  height: 220px;
   overflow: hidden;
+
+  @media (max-width: 1000px) {
+    height: 190px;
+  }
+`;
+
+export const StyledImage = styled(Image)<{ objectPosition: string }>`
+  transition: object-position 2000ms ease-in-out;
+  object-position: ${(props) => props.objectPosition};
 `;
 
 export const Content = styled.div`

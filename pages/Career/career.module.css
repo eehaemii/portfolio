@@ -54,3 +54,14 @@
 .iconActive {
   transform: rotate(180deg);
 }
+
+/* 반응형 */
+@media (max-width: 1000px) {
+  .careerList {
+    display: block;
+  }
+
+  .careerItem {
+    margin-top: 12px;
+  }
+}
