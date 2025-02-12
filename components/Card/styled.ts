@@ -25,7 +25,7 @@ export const Thumbnail = styled.div`
   overflow: hidden;
 
   @media (max-width: 1000px) {
-    height: 190px;
+    height: 30vmax;
   }
 `;
 
