@@ -12,7 +12,7 @@ const ProjectPage = () => {
         { message: 'styled-component', theme: EThemeTag.STYLEDCOMPONENT },
       ],
       demoLink: 'https://www.notion.so/eehaemii/c4aee3e1bd034dc78557ceb5d7bc6939?pvs=4',
-      participation: '퍼블리싱 100%',
+      role: '퍼블리싱 100%',
       details: '상세 설명 텍스트',
     },
     {
@@ -24,7 +24,7 @@ const ProjectPage = () => {
         { message: 'jquery', theme: EThemeTag.JQUERY },
       ],
       demoLink: 'https://www.sum37.co.kr/reem_acra/views/main.html',
-      participation: '퍼블리싱 100%',
+      role: '퍼블리싱 100%',
       details: '상세 설명 텍스트',
     },
     {
@@ -36,7 +36,7 @@ const ProjectPage = () => {
         { message: 'jquery', theme: EThemeTag.JQUERY },
       ],
       demoLink: 'https://e.kpipa.or.kr/cleanBook/main/main.do',
-      participation: '퍼블리싱 100%',
+      role: '퍼블리싱 100%',
       details: '상세 설명 텍스트',
     },
     {
@@ -49,7 +49,7 @@ const ProjectPage = () => {
         { message: 'bootstrap', theme: EThemeTag.BOOTSTRAP },
       ],
       demoLink: 'https://eehaemii.github.io/designUploadSite/views/intro.html',
-      participation: '퍼블리싱 100%',
+      role: '퍼블리싱 100%',
       details: '상세 설명 텍스트',
     },
     {
@@ -61,7 +61,7 @@ const ProjectPage = () => {
         { message: 'jquery', theme: EThemeTag.JQUERY },
       ],
       demoLink: 'https://www.ssif.or.kr/',
-      participation: '퍼블리싱 100%',
+      role: '퍼블리싱 100%',
       details: '상세 설명 텍스트',
     },
   ];
@@ -77,7 +77,7 @@ const ProjectPage = () => {
             thumbnail={project.thumbnail}
             name={project.name}
             list={project.list}
-            participation={project.participation}
+            role={project.role}
             demoLink={project.demoLink || ''}
           />
         ))}

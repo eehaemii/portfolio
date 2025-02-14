@@ -5,7 +5,7 @@ export interface IPropsBox {
   name?: string;
   thumbnail?: string;
   demoLink?: string;
-  participation?: string;
+  role?: string;
   onClick?: () => void;
 }
 

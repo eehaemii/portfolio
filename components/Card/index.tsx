@@ -3,13 +3,7 @@ import * as S from './styled';
 import { IPropsBox, ItemType } from '@/components/Card/interface';
 import Tag from '@/components/Tag';
 
-const ProjectCard: React.FC<IPropsBox> = ({
-  name,
-  thumbnail,
-  demoLink,
-  participation,
-  list = [],
-}) => {
+const ProjectCard: React.FC<IPropsBox> = ({ name, thumbnail, demoLink, role, list = [] }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -29,7 +23,7 @@ const ProjectCard: React.FC<IPropsBox> = ({
         {list.map((item: ItemType, index: number) => (
           <Tag key={index} message={item.message} themeType={item.theme} />
         ))}
-        <S.ParticipationText>참여도 : {participation}</S.ParticipationText>
+        <S.RoleText>기여도 : {role}</S.RoleText>
         {demoLink && (
           <S.Link href={demoLink} target="_blank">
             🔗 LINK

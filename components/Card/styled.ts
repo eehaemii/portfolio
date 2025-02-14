@@ -47,7 +47,7 @@ export const Title = styled.h3`
   text-overflow: ellipsis;
 `;
 
-export const ParticipationText = styled.p`
+export const RoleText = styled.p`
   padding-top: 8px;
   font-size: 1rem;
 `;
