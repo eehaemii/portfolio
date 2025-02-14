@@ -42,6 +42,14 @@ export const Title = styled.h3`
   padding-bottom: 6px;
   font-size: 1.25rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+`;
+
+export const ParticipationText = styled.p`
+  padding-top: 8px;
+  font-size: 1rem;
 `;
 
 export const Description = styled.p`
